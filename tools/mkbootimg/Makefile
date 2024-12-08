@@ -10,7 +10,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=mkbootimg
-PKG_VERSION:=2022-11-09
+PKG_VERSION:=2022.11.09
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/osm0sis/mkbootimg.git
 PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION)

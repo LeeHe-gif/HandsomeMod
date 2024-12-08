@@ -9,9 +9,10 @@ include $(TOPDIR)/rules.mk
 PKG_NAME:=simg-tools
 PKG_SOURCE_URL=https://github.com/HandsomeMod/simg-tools.git
 PKG_SOURCE_PROTO:=git
-PKG_SOURCE_DATE:=2021-04-12
-PKG_SOURCE_VERSION:=4b805b4ff0129fb8df553247c1edce2fecfada6e
+PKG_SOURCE_DATE:=2022.11.09
+PKG_SOURCE_VERSION:=8.1.0-1
 PKG_MIRROR_HASH:=a7845da69ebb38634717f57df659e5bed816aee888c82836e399a525305b12b6
+PKG_SOURCE:=$(PKG_NAME)-$(PKG_SOURCE_VERSION).tar.gz
 
 include $(INCLUDE_DIR)/host-build.mk
 include $(INCLUDE_DIR)/cmake.mk

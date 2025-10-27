@@ -10,7 +10,7 @@ include $(TOPDIR)/rules.mk
 PKG_NAME:=qcom-firmware
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/LeeHe-gif/qcom-firmware.git
-PKG_SOURCE_VERSION:=1e8c84d3e9d5f0f5aeae1d1c482ae5756a6a2d57
+PKG_SOURCE_VERSION:=14cc4b0f5ccde6276b603968e9e5acbf682a5717
 
 PKG_MAINTAINER:=Handsomeyingyan <handsomeyingyan@gmail.com>
 STRIP:=:

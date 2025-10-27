@@ -68,11 +68,27 @@ endef
 define Package/qcom-msm8916-openstick-ufi001b-wcnss-firmware
   $(Package/qcom-firmware-default)
   TITLE:=Openstick UFI001B WIFI & Bluetooth firmware
+  CONFLICTS:= \
+    qcom-msm8916-openstick-ufi001c-wcnss-firmware \
+    qcom-msm8916-openstick-ufi003-wcnss-firmware \
+    qcom-msm8916-openstick-ufi103s-wcnss-firmware \
+    qcom-msm8916-openstick-sp970-wcnss-firmware \
+    qcom-msm8916-openstick-uz801-wcnss-firmware \
+    qcom-msm8916-openstick-uz801v3-wcnss-firmware \
+    qcom-msm8916-wt8x047-wcnss-firmware
 endef
 
 define Package/qcom-msm8916-openstick-ufi001c-wcnss-firmware
   $(Package/qcom-firmware-default)
   TITLE:=Openstick UFI001C WIFI & Bluetooth firmware
+  CONFLICTS:= \
+    qcom-msm8916-openstick-ufi001b-wcnss-firmware \
+    qcom-msm8916-openstick-ufi003-wcnss-firmware \
+    qcom-msm8916-openstick-ufi103s-wcnss-firmware \
+    qcom-msm8916-openstick-sp970-wcnss-firmware \
+    qcom-msm8916-openstick-uz801-wcnss-firmware \
+    qcom-msm8916-openstick-uz801v3-wcnss-firmware \
+    qcom-msm8916-wt8x047-wcnss-firmware
 endef
 
 define Package/qcom-msm8916-openstick-ufi003-wcnss-firmware
@@ -168,6 +184,15 @@ endef
 define Package/qcom-msm8916-modem-openstick-ufi001b-firmware
   $(Package/qcom-firmware-default)
   TITLE:=Qualcomm msm8916 modem firmware for Handsome Openstick UFI001B
+  CONFLICTS:= \
+    qcom-msm8916-modem-openstick-ufi001c-firmware \
+    qcom-msm8916-modem-openstick-ufi003-firmware \
+    qcom-msm8916-modem-openstick-ufi103s-firmware \
+    qcom-msm8916-modem-openstick-sp970-firmware \
+    qcom-msm8916-modem-openstick-uz801-firmware \
+    qcom-msm8916-modem-openstick-uz801v3-firmware \
+    qcom-msm8916-modem-wt88047-firmware \
+    qcom-msm8916-modem-wt86047-firmware
 endef
 
 define Package/qcom-msm8916-modem-openstick-ufi001c-firmware

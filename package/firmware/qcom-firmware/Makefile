@@ -696,6 +696,27 @@ define Package/qcom-msm8916-modem-openstick-uz801v3-firmware/install
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-uz801v3/modem.mdt $(1)/lib/firmware/modem-uz801v3.mdt
 endef
 
+# 创建设备检测脚本包
+define Package/qcom-firmware-setup
+  $(Package/qcom-firmware-default)
+  TITLE:=Qualcomm firmware device detection and setup
+  DEPENDS:=+qcom-msm8916-wcnss-wt88047-nv +qcom-msm8916-wt8x047-wcnss-firmware +qcom-msm8916-modem-wt88047-firmware
+endef
+
+define Package/qcom-firmware-setup/install
+	$(INSTALL_DIR) $(1)/etc/init.d
+	$(INSTALL_BIN) ./files/qcom-firmware-setup $(1)/etc/init.d/qcom-firmware
+	$(INSTALL_DIR) $(1)/usr/sbin
+	$(INSTALL_BIN) ./files/qcom-firmware-setup $(1)/usr/sbin/qcom-firmware-setup
+endef
+
+define Package/qcom-firmware-setup/postinst
+#!/bin/sh
+# 启用启动脚本
+[ -n "$$IPKG_INSTROOT" ] || /etc/init.d/qcom-firmware enable
+exit 0
+endef
+
 $(eval $(call BuildPackage,qcom-apq8016-wcnss-firmware))
 $(eval $(call BuildPackage,qcom-msm8916-openstick-ufi001b-wcnss-firmware))
 $(eval $(call BuildPackage,qcom-msm8916-openstick-ufi001c-wcnss-firmware))
@@ -724,3 +745,4 @@ $(eval $(call BuildPackage,qcom-msm8916-modem-openstick-ufi103s-firmware))
 $(eval $(call BuildPackage,qcom-msm8916-modem-openstick-sp970-firmware))
 $(eval $(call BuildPackage,qcom-msm8916-modem-openstick-uz801-firmware))
 $(eval $(call BuildPackage,qcom-msm8916-modem-openstick-uz801v3-firmware))
+$(eval $(call BuildPackage,qcom-firmware-setup))

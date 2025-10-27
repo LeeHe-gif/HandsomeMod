@@ -8,12 +8,8 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=qcom-firmware
-PKG_VERSION:=r1034.2.1
-PKG_RELEASE:=2
-
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/LeeHe-gif/qcom-firmware.git
-PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.xz
 PKG_SOURCE_VERSION:=1e8c84d3e9d5f0f5aeae1d1c482ae5756a6a2d57
 PKG_MIRROR_HASH:=a2c816984f5ea28b165efbfa90c6f713d9d9121f816a5c8dfe574a3758293599
 

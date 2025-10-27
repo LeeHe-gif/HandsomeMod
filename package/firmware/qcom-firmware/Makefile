@@ -515,83 +515,32 @@ endef
 
 define Package/qcom-apq8016-modem-firmware/install
 	$(INSTALL_DIR) $(1)/lib/firmware
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-apq8016/mba.mbn $(1)/lib/firmware/mba-apq8016.mbn
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-apq8016/modem.b00 $(1)/lib/firmware/modem-apq8016.b00
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-apq8016/modem.b01 $(1)/lib/firmware/modem-apq8016.b01
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-apq8016/modem.b02 $(1)/lib/firmware/modem-apq8016.b02
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-apq8016/modem.b03 $(1)/lib/firmware/modem-apq8016.b03
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-apq8016/modem.b04 $(1)/lib/firmware/modem-apq8016.b04
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-apq8016/modem.b05 $(1)/lib/firmware/modem-apq8016.b05
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-apq8016/modem.b06 $(1)/lib/firmware/modem-apq8016.b06
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-apq8016/modem.b08 $(1)/lib/firmware/modem-apq8016.b08
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-apq8016/modem.b09 $(1)/lib/firmware/modem-apq8016.b09
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-apq8016/modem.b12 $(1)/lib/firmware/modem-apq8016.b12
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-apq8016/modem.b13 $(1)/lib/firmware/modem-apq8016.b13
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-apq8016/modem.b14 $(1)/lib/firmware/modem-apq8016.b14
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-apq8016/modem.b15 $(1)/lib/firmware/modem-apq8016.b15
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-apq8016/modem.b16 $(1)/lib/firmware/modem-apq8016.b16
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-apq8016/modem.b17 $(1)/lib/firmware/modem-apq8016.b17
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-apq8016/modem.b18 $(1)/lib/firmware/modem-apq8016.b18
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-apq8016/modem.b21 $(1)/lib/firmware/modem-apq8016.b21
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-apq8016/modem.b22 $(1)/lib/firmware/modem-apq8016.b22
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-apq8016/modem.b23 $(1)/lib/firmware/modem-apq8016.b23
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-apq8016/modem.b25 $(1)/lib/firmware/modem-apq8016.b25
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-apq8016/modem.b26 $(1)/lib/firmware/modem-apq8016.b26
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-apq8016/modem.mdt $(1)/lib/firmware/modem-apq8016.mdt
+	$(INSTALL_DATA) \
+		$(PKG_BUILD_DIR)/dragonboard/mba.mbn \
+		$(1)/lib/firmware
+	$(INSTALL_DATA) \
+		$(PKG_BUILD_DIR)/dragonboard/modem.* \
+		$(1)/lib/firmware
 endef
 
 define Package/qcom-msm8916-modem-wt88047-firmware/install
 	$(INSTALL_DIR) $(1)/lib/firmware
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-wt88047/mba.mbn $(1)/lib/firmware/mba-wt88047.mbn
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-wt88047/modem.b00 $(1)/lib/firmware/modem-wt88047.b00
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-wt88047/modem.b01 $(1)/lib/firmware/modem-wt88047.b01
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-wt88047/modem.b02 $(1)/lib/firmware/modem-wt88047.b02
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-wt88047/modem.b03 $(1)/lib/firmware/modem-wt88047.b03
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-wt88047/modem.b04 $(1)/lib/firmware/modem-wt88047.b04
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-wt88047/modem.b05 $(1)/lib/firmware/modem-wt88047.b05
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-wt88047/modem.b06 $(1)/lib/firmware/modem-wt88047.b06
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-wt88047/modem.b08 $(1)/lib/firmware/modem-wt88047.b08
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-wt88047/modem.b09 $(1)/lib/firmware/modem-wt88047.b09
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-wt88047/modem.b12 $(1)/lib/firmware/modem-wt88047.b12
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-wt88047/modem.b13 $(1)/lib/firmware/modem-wt88047.b13
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-wt88047/modem.b14 $(1)/lib/firmware/modem-wt88047.b14
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-wt88047/modem.b15 $(1)/lib/firmware/modem-wt88047.b15
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-wt88047/modem.b16 $(1)/lib/firmware/modem-wt88047.b16
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-wt88047/modem.b17 $(1)/lib/firmware/modem-wt88047.b17
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-wt88047/modem.b18 $(1)/lib/firmware/modem-wt88047.b18
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-wt88047/modem.b21 $(1)/lib/firmware/modem-wt88047.b21
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-wt88047/modem.b22 $(1)/lib/firmware/modem-wt88047.b22
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-wt88047/modem.b23 $(1)/lib/firmware/modem-wt88047.b23
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-wt88047/modem.b25 $(1)/lib/firmware/modem-wt88047.b25
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-wt88047/modem.b26 $(1)/lib/firmware/modem-wt88047.b26
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-wt88047/modem.mdt $(1)/lib/firmware/modem-wt88047.mdt
+	$(INSTALL_DATA) \
+		$(PKG_BUILD_DIR)/wt88047/mba.mbn \
+		$(1)/lib/firmware
+	$(INSTALL_DATA) \
+		$(PKG_BUILD_DIR)/wt88047/modem.* \
+		$(1)/lib/firmware
 endef
 
 define Package/qcom-msm8916-modem-wt86047-firmware/install
 	$(INSTALL_DIR) $(1)/lib/firmware
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-wt86047/mba.mbn $(1)/lib/firmware/mba-wt86047.mbn
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-wt86047/modem.b00 $(1)/lib/firmware/modem-wt86047.b00
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-wt86047/modem.b01 $(1)/lib/firmware/modem-wt86047.b01
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-wt86047/modem.b02 $(1)/lib/firmware/modem-wt86047.b02
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-wt86047/modem.b03 $(1)/lib/firmware/modem-wt86047.b03
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-wt86047/modem.b04 $(1)/lib/firmware/modem-wt86047.b04
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-wt86047/modem.b05 $(1)/lib/firmware/modem-wt86047.b05
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-wt86047/modem.b06 $(1)/lib/firmware/modem-wt86047.b06
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-wt86047/modem.b08 $(1)/lib/firmware/modem-wt86047.b08
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-wt86047/modem.b09 $(1)/lib/firmware/modem-wt86047.b09
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-wt86047/modem.b12 $(1)/lib/firmware/modem-wt86047.b12
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-wt86047/modem.b13 $(1)/lib/firmware/modem-wt86047.b13
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-wt86047/modem.b14 $(1)/lib/firmware/modem-wt86047.b14
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-wt86047/modem.b15 $(1)/lib/firmware/modem-wt86047.b15
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-wt86047/modem.b16 $(1)/lib/firmware/modem-wt86047.b16
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-wt86047/modem.b17 $(1)/lib/firmware/modem-wt86047.b17
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-wt86047/modem.b18 $(1)/lib/firmware/modem-wt86047.b18
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-wt86047/modem.b21 $(1)/lib/firmware/modem-wt86047.b21
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-wt86047/modem.b22 $(1)/lib/firmware/modem-wt86047.b22
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-wt86047/modem.b23 $(1)/lib/firmware/modem-wt86047.b23
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-wt86047/modem.b25 $(1)/lib/firmware/modem-wt86047.b25
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-wt86047/modem.b26 $(1)/lib/firmware/modem-wt86047.b26
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-wt86047/modem.mdt $(1)/lib/firmware/modem-wt86047.mdt
+	$(INSTALL_DATA) \
+		$(PKG_BUILD_DIR)/wt86047/mba.mbn \
+		$(1)/lib/firmware
+	$(INSTALL_DATA) \
+		$(PKG_BUILD_DIR)/wt86047/modem.* \
+		$(1)/lib/firmware
 endef
 
 define Package/qcom-msm8916-modem-openstick-ufi001b-firmware/install
@@ -603,21 +552,16 @@ define Package/qcom-msm8916-modem-openstick-ufi001b-firmware/install
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi001b/modem.b03 $(1)/lib/firmware/modem-ufi001b.b03
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi001b/modem.b04 $(1)/lib/firmware/modem-ufi001b.b04
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi001b/modem.b05 $(1)/lib/firmware/modem-ufi001b.b05
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi001b/modem.b06 $(1)/lib/firmware/modem-ufi001b.b06
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi001b/modem.b08 $(1)/lib/firmware/modem-ufi001b.b08
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi001b/modem.b09 $(1)/lib/firmware/modem-ufi001b.b09
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi001b/modem.b12 $(1)/lib/firmware/modem-ufi001b.b12
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi001b/modem.b13 $(1)/lib/firmware/modem-ufi001b.b13
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi001b/modem.b14 $(1)/lib/firmware/modem-ufi001b.b14
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi001b/modem.b15 $(1)/lib/firmware/modem-ufi001b.b15
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi001b/modem.b16 $(1)/lib/firmware/modem-ufi001b.b16
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi001b/modem.b17 $(1)/lib/firmware/modem-ufi001b.b17
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi001b/modem.b18 $(1)/lib/firmware/modem-ufi001b.b18
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi001b/modem.b21 $(1)/lib/firmware/modem-ufi001b.b21
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi001b/modem.b22 $(1)/lib/firmware/modem-ufi001b.b22
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi001b/modem.b23 $(1)/lib/firmware/modem-ufi001b.b23
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi001b/modem.b25 $(1)/lib/firmware/modem-ufi001b.b25
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi001b/modem.b26 $(1)/lib/firmware/modem-ufi001b.b26
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi001b/modem.mdt $(1)/lib/firmware/modem-ufi001b.mdt
 endef
 
@@ -630,49 +574,17 @@ define Package/qcom-msm8916-modem-openstick-ufi001c-firmware/install
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi001c/modem.b03 $(1)/lib/firmware/modem-ufi001c.b03
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi001c/modem.b04 $(1)/lib/firmware/modem-ufi001c.b04
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi001c/modem.b05 $(1)/lib/firmware/modem-ufi001c.b05
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi001c/modem.b06 $(1)/lib/firmware/modem-ufi001c.b06
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi001c/modem.b08 $(1)/lib/firmware/modem-ufi001c.b08
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi001c/modem.b09 $(1)/lib/firmware/modem-ufi001c.b09
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi001c/modem.b12 $(1)/lib/firmware/modem-ufi001c.b12
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi001c/modem.b13 $(1)/lib/firmware/modem-ufi001c.b13
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi001c/modem.b14 $(1)/lib/firmware/modem-ufi001c.b14
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi001c/modem.b15 $(1)/lib/firmware/modem-ufi001c.b15
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi001c/modem.b16 $(1)/lib/firmware/modem-ufi001c.b16
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi001c/modem.b17 $(1)/lib/firmware/modem-ufi001c.b17
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi001c/modem.b18 $(1)/lib/firmware/modem-ufi001c.b18
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi001c/modem.b21 $(1)/lib/firmware/modem-ufi001c.b21
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi001c/modem.b22 $(1)/lib/firmware/modem-ufi001c.b22
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi001c/modem.b23 $(1)/lib/firmware/modem-ufi001c.b23
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi001c/modem.b25 $(1)/lib/firmware/modem-ufi001c.b25
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi001c/modem.b26 $(1)/lib/firmware/modem-ufi001c.b26
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi001c/modem.mdt $(1)/lib/firmware/modem-ufi001c.mdt
-endef
-
-define Package/qcom-msm8916-modem-openstick-ufi003-firmware/install
-	$(INSTALL_DIR) $(1)/lib/firmware
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi003/mba.mbn $(1)/lib/firmware/mba-ufi003.mbn
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi003/modem.b00 $(1)/lib/firmware/modem-ufi003.b00
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi003/modem.b01 $(1)/lib/firmware/modem-ufi003.b01
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi003/modem.b02 $(1)/lib/firmware/modem-ufi003.b02
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi003/modem.b03 $(1)/lib/firmware/modem-ufi003.b03
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi003/modem.b04 $(1)/lib/firmware/modem-ufi003.b04
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi003/modem.b05 $(1)/lib/firmware/modem-ufi003.b05
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi003/modem.b06 $(1)/lib/firmware/modem-ufi003.b06
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi003/modem.b08 $(1)/lib/firmware/modem-ufi003.b08
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi003/modem.b09 $(1)/lib/firmware/modem-ufi003.b09
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi003/modem.b12 $(1)/lib/firmware/modem-ufi003.b12
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi003/modem.b13 $(1)/lib/firmware/modem-ufi003.b13
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi003/modem.b14 $(1)/lib/firmware/modem-ufi003.b14
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi003/modem.b15 $(1)/lib/firmware/modem-ufi003.b15
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi003/modem.b16 $(1)/lib/firmware/modem-ufi003.b16
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi003/modem.b17 $(1)/lib/firmware/modem-ufi003.b17
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi003/modem.b18 $(1)/lib/firmware/modem-ufi003.b18
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi003/modem.b21 $(1)/lib/firmware/modem-ufi003.b21
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi003/modem.b22 $(1)/lib/firmware/modem-ufi003.b22
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi003/modem.b23 $(1)/lib/firmware/modem-ufi003.b23
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi003/modem.b25 $(1)/lib/firmware/modem-ufi003.b25
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi003/modem.b26 $(1)/lib/firmware/modem-ufi003.b26
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi003/modem.mdt $(1)/lib/firmware/modem-ufi003.mdt
 endef
 
 define Package/qcom-msm8916-modem-openstick-ufi103s-firmware/install
@@ -684,22 +596,31 @@ define Package/qcom-msm8916-modem-openstick-ufi103s-firmware/install
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi103s/modem.b03 $(1)/lib/firmware/modem-ufi103s.b03
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi103s/modem.b04 $(1)/lib/firmware/modem-ufi103s.b04
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi103s/modem.b05 $(1)/lib/firmware/modem-ufi103s.b05
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi103s/modem.b06 $(1)/lib/firmware/modem-ufi103s.b06
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi103s/modem.b08 $(1)/lib/firmware/modem-ufi103s.b08
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi103s/modem.b09 $(1)/lib/firmware/modem-ufi103s.b09
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi103s/modem.b12 $(1)/lib/firmware/modem-ufi103s.b12
+	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi103s/modem.b10 $(1)/lib/firmware/modem-ufi103s.b10
+	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi103s/modem.b11 $(1)/lib/firmware/modem-ufi103s.b11
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi103s/modem.b13 $(1)/lib/firmware/modem-ufi103s.b13
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi103s/modem.b14 $(1)/lib/firmware/modem-ufi103s.b14
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi103s/modem.b15 $(1)/lib/firmware/modem-ufi103s.b15
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi103s/modem.b16 $(1)/lib/firmware/modem-ufi103s.b16
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi103s/modem.b17 $(1)/lib/firmware/modem-ufi103s.b17
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi103s/modem.b18 $(1)/lib/firmware/modem-ufi103s.b18
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi103s/modem.b21 $(1)/lib/firmware/modem-ufi103s.b21
+	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi103s/modem.b19 $(1)/lib/firmware/modem-ufi103s.b19
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi103s/modem.b22 $(1)/lib/firmware/modem-ufi103s.b22
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi103s/modem.b23 $(1)/lib/firmware/modem-ufi103s.b23
+	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi103s/modem.b24 $(1)/lib/firmware/modem-ufi103s.b24
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi103s/modem.b25 $(1)/lib/firmware/modem-ufi103s.b25
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi103s/modem.b26 $(1)/lib/firmware/modem-ufi103s.b26
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-ufi103s/modem.mdt $(1)/lib/firmware/modem-ufi103s.mdt
+endef
+
+define Package/qcom-msm8916-modem-openstick-ufi003-firmware/install
+	$(INSTALL_DIR) $(1)/lib/firmware
+	$(INSTALL_DATA) \
+		$(PKG_BUILD_DIR)/openstick-ufi003/mba.mbn \
+		$(1)/lib/firmware
+	$(INSTALL_DATA) \
+		$(PKG_BUILD_DIR)/openstick-ufi003/modem.* \
+		$(1)/lib/firmware
 endef
 
 define Package/qcom-msm8916-modem-openstick-sp970-firmware/install
@@ -711,21 +632,15 @@ define Package/qcom-msm8916-modem-openstick-sp970-firmware/install
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-sp970/modem.b03 $(1)/lib/firmware/modem-sp970.b03
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-sp970/modem.b04 $(1)/lib/firmware/modem-sp970.b04
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-sp970/modem.b05 $(1)/lib/firmware/modem-sp970.b05
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-sp970/modem.b06 $(1)/lib/firmware/modem-sp970.b06
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-sp970/modem.b08 $(1)/lib/firmware/modem-sp970.b08
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-sp970/modem.b09 $(1)/lib/firmware/modem-sp970.b09
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-sp970/modem.b12 $(1)/lib/firmware/modem-sp970.b12
+	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-sp970/modem.b10 $(1)/lib/firmware/modem-sp970.b10
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-sp970/modem.b13 $(1)/lib/firmware/modem-sp970.b13
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-sp970/modem.b14 $(1)/lib/firmware/modem-sp970.b14
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-sp970/modem.b15 $(1)/lib/firmware/modem-sp970.b15
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-sp970/modem.b16 $(1)/lib/firmware/modem-sp970.b16
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-sp970/modem.b17 $(1)/lib/firmware/modem-sp970.b17
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-sp970/modem.b18 $(1)/lib/firmware/modem-sp970.b18
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-sp970/modem.b21 $(1)/lib/firmware/modem-sp970.b21
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-sp970/modem.b22 $(1)/lib/firmware/modem-sp970.b22
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-sp970/modem.b23 $(1)/lib/firmware/modem-sp970.b23
+	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-sp970/modem.b19 $(1)/lib/firmware/modem-sp970.b19
+	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-sp970/modem.b24 $(1)/lib/firmware/modem-sp970.b24
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-sp970/modem.b25 $(1)/lib/firmware/modem-sp970.b25
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-sp970/modem.b26 $(1)/lib/firmware/modem-sp970.b26
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-sp970/modem.mdt $(1)/lib/firmware/modem-sp970.mdt
 endef
 
@@ -738,21 +653,20 @@ define Package/qcom-msm8916-modem-openstick-uz801-firmware/install
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-uz801/modem.b03 $(1)/lib/firmware/modem-uz801.b03
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-uz801/modem.b04 $(1)/lib/firmware/modem-uz801.b04
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-uz801/modem.b05 $(1)/lib/firmware/modem-uz801.b05
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-uz801/modem.b06 $(1)/lib/firmware/modem-uz801.b06
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-uz801/modem.b08 $(1)/lib/firmware/modem-uz801.b08
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-uz801/modem.b09 $(1)/lib/firmware/modem-uz801.b09
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-uz801/modem.b12 $(1)/lib/firmware/modem-uz801.b12
+	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-uz801/modem.b10 $(1)/lib/firmware/modem-uz801.b10
+	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-uz801/modem.b11 $(1)/lib/firmware/modem-uz801.b11
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-uz801/modem.b13 $(1)/lib/firmware/modem-uz801.b13
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-uz801/modem.b14 $(1)/lib/firmware/modem-uz801.b14
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-uz801/modem.b15 $(1)/lib/firmware/modem-uz801.b15
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-uz801/modem.b16 $(1)/lib/firmware/modem-uz801.b16
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-uz801/modem.b17 $(1)/lib/firmware/modem-uz801.b17
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-uz801/modem.b18 $(1)/lib/firmware/modem-uz801.b18
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-uz801/modem.b21 $(1)/lib/firmware/modem-uz801.b21
+	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-uz801/modem.b19 $(1)/lib/firmware/modem-uz801.b19
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-uz801/modem.b22 $(1)/lib/firmware/modem-uz801.b22
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-uz801/modem.b23 $(1)/lib/firmware/modem-uz801.b23
+	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-uz801/modem.b24 $(1)/lib/firmware/modem-uz801.b24
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-uz801/modem.b25 $(1)/lib/firmware/modem-uz801.b25
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-uz801/modem.b26 $(1)/lib/firmware/modem-uz801.b26
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-uz801/modem.mdt $(1)/lib/firmware/modem-uz801.mdt
 endef
 
@@ -765,21 +679,20 @@ define Package/qcom-msm8916-modem-openstick-uz801v3-firmware/install
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-uz801v3/modem.b03 $(1)/lib/firmware/modem-uz801v3.b03
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-uz801v3/modem.b04 $(1)/lib/firmware/modem-uz801v3.b04
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-uz801v3/modem.b05 $(1)/lib/firmware/modem-uz801v3.b05
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-uz801v3/modem.b06 $(1)/lib/firmware/modem-uz801v3.b06
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-uz801v3/modem.b08 $(1)/lib/firmware/modem-uz801v3.b08
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-uz801v3/modem.b09 $(1)/lib/firmware/modem-uz801v3.b09
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-uz801v3/modem.b12 $(1)/lib/firmware/modem-uz801v3.b12
+	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-uz801v3/modem.b10 $(1)/lib/firmware/modem-uz801v3.b10
+	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-uz801v3/modem.b11 $(1)/lib/firmware/modem-uz801v3.b11
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-uz801v3/modem.b13 $(1)/lib/firmware/modem-uz801v3.b13
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-uz801v3/modem.b14 $(1)/lib/firmware/modem-uz801v3.b14
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-uz801v3/modem.b15 $(1)/lib/firmware/modem-uz801v3.b15
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-uz801v3/modem.b16 $(1)/lib/firmware/modem-uz801v3.b16
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-uz801v3/modem.b17 $(1)/lib/firmware/modem-uz801v3.b17
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-uz801v3/modem.b18 $(1)/lib/firmware/modem-uz801v3.b18
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-uz801v3/modem.b21 $(1)/lib/firmware/modem-uz801v3.b21
+	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-uz801v3/modem.b19 $(1)/lib/firmware/modem-uz801v3.b19
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-uz801v3/modem.b22 $(1)/lib/firmware/modem-uz801v3.b22
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-uz801v3/modem.b23 $(1)/lib/firmware/modem-uz801v3.b23
+	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-uz801v3/modem.b24 $(1)/lib/firmware/modem-uz801v3.b24
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-uz801v3/modem.b25 $(1)/lib/firmware/modem-uz801v3.b25
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-uz801v3/modem.b26 $(1)/lib/firmware/modem-uz801v3.b26
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/openstick-uz801v3/modem.mdt $(1)/lib/firmware/modem-uz801v3.mdt
 endef
 

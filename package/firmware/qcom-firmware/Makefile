@@ -425,28 +425,28 @@ define Package/qcom-msm8916-wt8x047-wcnss-firmware/install
 		$(PKG_BUILD_DIR)/wt88047/wcnss.b00 \
 		$(1)/lib/firmware/wcnss-wt8x047.b00
 	$(INSTALL_DATA) \
-		$(PKG_BUILD_DIR)/openstick-wt8x047/wcnss.b01 \
+		$(PKG_BUILD_DIR)/wt88047/wcnss.b01 \
 		$(1)/lib/firmware/wcnss-wt8x047.b01
 	$(INSTALL_DATA) \
-		$(PKG_BUILD_DIR)/openstick-wt8x047/wcnss.b02 \
+		$(PKG_BUILD_DIR)/wt88047/wcnss.b02 \
 		$(1)/lib/firmware/wcnss-wt8x047.b02
 	$(INSTALL_DATA) \
-		$(PKG_BUILD_DIR)/openstick-wt8x047/wcnss.b04 \
+		$(PKG_BUILD_DIR)/wt88047/wcnss.b04 \
 		$(1)/lib/firmware/wcnss-wt8x047.b04
 	$(INSTALL_DATA) \
-		$(PKG_BUILD_DIR)/openstick-wt8x047/wcnss.b06 \
+		$(PKG_BUILD_DIR)/wt88047/wcnss.b06 \
 		$(1)/lib/firmware/wcnss-wt8x047.b06
 	$(INSTALL_DATA) \
-		$(PKG_BUILD_DIR)/openstick-wt8x047/wcnss.b09 \
+		$(PKG_BUILD_DIR)/wt88047/wcnss.b09 \
 		$(1)/lib/firmware/wcnss-wt8x047.b09
 	$(INSTALL_DATA) \
-		$(PKG_BUILD_DIR)/openstick-wt8x047/wcnss.b10 \
+		$(PKG_BUILD_DIR)/wt88047/wcnss.b10 \
 		$(1)/lib/firmware/wcnss-wt8x047.b10
 	$(INSTALL_DATA) \
-		$(PKG_BUILD_DIR)/openstick-wt8x047/wcnss.b11 \
+		$(PKG_BUILD_DIR)/wt88047/wcnss.b11 \
 		$(1)/lib/firmware/wcnss-wt8x047.b11
 	$(INSTALL_DATA) \
-		$(PKG_BUILD_DIR)/openstick-wt8x047/wcnss.mdt \
+		$(PKG_BUILD_DIR)/wt88047/wcnss.mdt \
 		$(1)/lib/firmware/wcnss-wt8x047.mdt
 endef
 

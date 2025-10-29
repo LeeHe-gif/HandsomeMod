@@ -705,9 +705,9 @@ endef
 
 define Package/qcom-firmware-setup/install
 	$(INSTALL_DIR) $(1)/etc/init.d
-	$(INSTALL_BIN) ./files/qcom-firmware-setup $(1)/etc/init.d/qcom-firmware
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/files/qcom-firmware-setup $(1)/etc/init.d/qcom-firmware
 	$(INSTALL_DIR) $(1)/usr/sbin
-	$(INSTALL_BIN) ./files/qcom-firmware-setup $(1)/usr/sbin/qcom-firmware-setup
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/files/qcom-firmware-setup $(1)/usr/sbin/qcom-firmware-setup
 endef
 
 define Package/qcom-firmware-setup/postinst

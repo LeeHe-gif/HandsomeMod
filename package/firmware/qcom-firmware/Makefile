@@ -422,7 +422,7 @@ endef
 define Package/qcom-msm8916-wt8x047-wcnss-firmware/install
 	$(INSTALL_DIR) $(1)/lib/firmware
 	$(INSTALL_DATA) \
-		$(PKG_BUILD_DIR)/openstick-wt8x047/wcnss.b00 \
+		$(PKG_BUILD_DIR)/wt88047/wcnss.b00 \
 		$(1)/lib/firmware/wcnss-wt8x047.b00
 	$(INSTALL_DATA) \
 		$(PKG_BUILD_DIR)/openstick-wt8x047/wcnss.b01 \

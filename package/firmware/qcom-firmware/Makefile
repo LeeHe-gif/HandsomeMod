@@ -236,32 +236,32 @@ endef
 define Package/qcom-msm8916-openstick-ufi001c-wcnss-firmware/install
 	$(INSTALL_DIR) $(1)/lib/firmware
 	$(INSTALL_DATA) \
-		$(PKG_BUILD_DIR)/openstick-ufi001b/wcnss.b00 \
+		$(PKG_BUILD_DIR)/openstick-ufi001c/wcnss.b00 \
 		$(1)/lib/firmware/wcnss-ufi001c.b00
 	$(INSTALL_DATA) \
-		$(PKG_BUILD_DIR)/openstick-ufi001b/wcnss.b01 \
+		$(PKG_BUILD_DIR)/openstick-ufi001c/wcnss.b01 \
 		$(1)/lib/firmware/wcnss-ufi001c.b01
 	$(INSTALL_DATA) \
-		$(PKG_BUILD_DIR)/openstick-ufi001b/wcnss.b02 \
+		$(PKG_BUILD_DIR)/openstick-ufi001c/wcnss.b02 \
 		$(1)/lib/firmware/wcnss-ufi001c.b02
 	$(INSTALL_DATA) \
-		$(PKG_BUILD_DIR)/openstick-ufi001b/wcnss.b04 \
-		$(1)/lib/firmware/wcnss-ufi001b.b04
+		$(PKG_BUILD_DIR)/openstick-ufi001c/wcnss.b04 \
+		$(1)/lib/firmware/wcnss-ufi001c.b04
 	$(INSTALL_DATA) \
-		$(PKG_BUILD_DIR)/openstick-ufi001b/wcnss.b06 \
-		$(1)/lib/firmware/wcnss-ufi001b.b06
+		$(PKG_BUILD_DIR)/openstick-ufi001c/wcnss.b06 \
+		$(1)/lib/firmware/wcnss-ufi001c.b06
 	$(INSTALL_DATA) \
-		$(PKG_BUILD_DIR)/openstick-ufi001b/wcnss.b09 \
-		$(1)/lib/firmware/wcnss-ufi001b.b09
+		$(PKG_BUILD_DIR)/openstick-ufi001c/wcnss.b09 \
+		$(1)/lib/firmware/wcnss-ufi001c.b09
 	$(INSTALL_DATA) \
-		$(PKG_BUILD_DIR)/openstick-ufi001b/wcnss.b10 \
-		$(1)/lib/firmware/wcnss-ufi001b.b10
+		$(PKG_BUILD_DIR)/openstick-ufi001c/wcnss.b10 \
+		$(1)/lib/firmware/wcnss-ufi001c.b10
 	$(INSTALL_DATA) \
-		$(PKG_BUILD_DIR)/openstick-ufi001b/wcnss.b11 \
-		$(1)/lib/firmware/wcnss-ufi001b.b11
+		$(PKG_BUILD_DIR)/openstick-ufi001c/wcnss.b11 \
+		$(1)/lib/firmware/wcnss-ufi001c.b11
 	$(INSTALL_DATA) \
-		$(PKG_BUILD_DIR)/openstick-ufi001b/wcnss.mdt \
-		$(1)/lib/firmware/wcnss-ufi001b.mdt
+		$(PKG_BUILD_DIR)/openstick-ufi001c/wcnss.mdt \
+		$(1)/lib/firmware/wcnss-ufi001c.mdt
 endef
 
 define Package/qcom-msm8916-openstick-ufi003-wcnss-firmware/install
